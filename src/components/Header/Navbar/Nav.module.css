@@ -1,0 +1,30 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: white;
+  padding: 4rem 0;
+}
+
+.logo {
+}
+
+.navLinks {
+  display: flex;
+  list-style: none;
+}
+
+.navLinks li a {
+  text-decoration: none;
+  color: white;
+}
+
+.navLinks li {
+  margin-right: 2rem;
+}
+
+.navLinks li:last-of-type {
+  margin-right: 0;
+}
