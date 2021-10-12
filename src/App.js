@@ -1,15 +1,13 @@
-// STRUCTURE:
-//  Header - img, navbar
-//  main.container {
-//    general card component {
-//      hero - title & desc, backBtn & bookmark
-//      stats - amountBacked, totalBackers, duration, progress bar
-//      name - about, reward options
-//    }
-//  }
+import Header from "./components/Header/Header";
+import Main from "./components/Main/Main";
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <Header />
+      <Main />
+    </div>
+  );
 }
 
 export default App;
