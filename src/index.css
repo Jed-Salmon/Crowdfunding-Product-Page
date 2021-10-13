@@ -2,6 +2,7 @@
   --primary: hsl(176, 50%, 47%);
   --secondary: hsl(176, 72%, 28%);
   --neutralGray: hsl(0, 0%, 48%);
+  --lightGray: #b1b1b1;
 }
 
 * {

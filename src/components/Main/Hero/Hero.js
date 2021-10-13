@@ -9,7 +9,7 @@ const Hero = () => {
     <Card>
       <img src={Logo} className={classes.avatar} alt="Mastercraft avatar" />
       <div className={classes.titles}>
-        <h1>Mastercraft Bamboo Monitor Riser</h1>
+        <h1 className={classes.title}>Mastercraft Bamboo Monitor Riser</h1>
         <p>
           A beautiful & handcrafted monitor stand to reduce neck and eye strain.
         </p>

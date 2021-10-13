@@ -18,3 +18,9 @@
 .bookmark span {
   margin: 0 1.25rem 0 0.75rem;
 }
+
+@media screen and (max-width: 640px) {
+  span {
+    display: none;
+  }
+}
