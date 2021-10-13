@@ -1,0 +1,20 @@
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.avatar {
+  position: absolute;
+  top: -28px;
+  left: calc(50% - 28px);
+}
+
+.titles {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.titles p {
+  margin-top: 1rem;
+}

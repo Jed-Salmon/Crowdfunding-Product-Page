@@ -1,3 +1,9 @@
+:root {
+  --primary: hsl(176, 50%, 47%);
+  --secondary: hsl(176, 72%, 28%);
+  --neutralGray: hsl(0, 0%, 48%);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,10 +15,10 @@ body {
   font-family: "Commissioner", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #fbfbfb;
   font-size: 1rem;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+p {
+  color: hsl(0, 0%, 48%);
 }
