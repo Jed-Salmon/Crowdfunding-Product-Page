@@ -12,10 +12,12 @@ function App() {
   return (
     <div className="App">
       {modalCtx.isOpen && backingCtx.backer === true && (
-        <Modal>Success Component</Modal>
+        <Modal onCloseModal={modalCtx.onCloseModal}>Success Component</Modal>
       )}
       {modalCtx.isOpen && backingCtx.backer === false && (
-        <Modal>Pledge Select Component</Modal>
+        <Modal onCloseModal={modalCtx.onCloseModal}>
+          Pledge Select Component
+        </Modal>
       )}
       <Header />
       <Main />
