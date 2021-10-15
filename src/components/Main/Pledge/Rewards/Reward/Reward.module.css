@@ -1,0 +1,50 @@
+.card {
+  background: white;
+  padding: 1.25rem;
+  margin: 1.5rem 0;
+  border: 2px solid #eee;
+  border-radius: 8px;
+}
+
+.card:last-of-type {
+  margin-bottom: 0rem;
+}
+
+.r1,
+.r3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 640px) {
+  .r1,
+  .r3 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .r1 h3 {
+    margin-bottom: 0.25rem;
+  }
+  .r3 .quantity {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.r1 p {
+  color: var(--secondary);
+}
+
+.r2 {
+  margin: 1.25rem 0;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quantity h1 {
+  margin-right: 0.5rem;
+}

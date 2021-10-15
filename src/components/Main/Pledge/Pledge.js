@@ -4,7 +4,7 @@ import Rewards from "./Rewards/Rewards";
 
 const Pledge = () => {
   return (
-    <Card>
+    <Card style={{ marginBottom: "calc(1.5rem + 80px)" }}>
       <About />
       <Rewards />
     </Card>

@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import ModalContext from "../../../store/modalContext/ModalContext";
 import Card from "../../UI/Card";
 import Logo from "./assets/logo-mastercraft.svg";
 import Button from "../../UI/Button";
@@ -5,6 +7,12 @@ import BookmarkBtn from "./BookmarkBtn/BookmarkBtn";
 import classes from "./Hero.module.css";
 
 const Hero = () => {
+  const modalCtx = useContext(ModalContext);
+
+  const openModalHandler = () => {
+    modalCtx.onOpenModal();
+  };
+
   return (
     <Card>
       <img src={Logo} className={classes.avatar} alt="Mastercraft avatar" />
@@ -15,7 +23,8 @@ const Hero = () => {
         </p>
       </div>
       <div className={classes.buttons}>
-        <Button>Back this project</Button>
+        <Button onClick={openModalHandler}>Back this project</Button>
+        {/* props.function - trigger state change to enable modal */}
         <BookmarkBtn />
       </div>
     </Card>

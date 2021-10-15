@@ -3,14 +3,14 @@
   border: 2px solid #eee;
   border-radius: 8px;
   padding: 2rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  margin-bottom: 1.25rem;
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+  margin-bottom: 1.5rem;
   position: relative;
 }
 
 @media screen and (max-width: 640px) {
   .card {
-    padding: 1rem;
+    padding: 1.25rem;
   }
 }
