@@ -10,11 +10,11 @@
 
 .modal {
   position: fixed;
-  top: 25vh;
   left: 5%;
   width: 90%;
+  height: max-content;
   background-color: white;
-  padding: 1rem;
+  padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   z-index: 30;
@@ -23,8 +23,17 @@
 
 @media (min-width: 768px) {
   .modal {
-    width: 688px;
-    left: calc(50% - 344px);
+    width: 680px;
+    left: calc(50% - 340px);
+  }
+}
+
+/* enables scroll once smaller than height of the modal */
+@media screen and (max-height: 963px) {
+  .modal {
+    top: 3.75%;
+    height: 92.5%;
+    overflow-y: scroll;
   }
 }
 

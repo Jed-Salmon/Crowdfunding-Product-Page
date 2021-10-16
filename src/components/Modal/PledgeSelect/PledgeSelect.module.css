@@ -1,0 +1,62 @@
+.pledgeSelect {
+}
+
+.pledgeSelect .headings {
+  margin-top: 1rem;
+}
+
+.pledgeSelect .headings h2 {
+  margin-bottom: 0.75rem;
+}
+
+.rewardOptions {
+}
+
+.rewardOptions label {
+  display: flex;
+  outline: 1px solid gray;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+}
+.rewardOptions label .radioBtn {
+}
+
+.rewardOptions .pledgeContent {
+}
+
+.pledgeContent .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pledgeContent .row span {
+  display: flex;
+  align-items: center;
+}
+
+span .titles {
+  display: flex;
+}
+
+span h4 {
+  margin-right: 0.5rem;
+}
+
+span .titles .title {
+  margin-right: 1rem;
+}
+
+.pledgeContent .row .cost {
+  color: var(--secondary);
+}
+
+.pledgeContent .pledgeSelected {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 640px) {
+}

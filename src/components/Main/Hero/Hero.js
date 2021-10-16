@@ -23,7 +23,9 @@ const Hero = () => {
         </p>
       </div>
       <div className={classes.buttons}>
-        <Button onClick={openModalHandler}>Back this project</Button>
+        <Button onClick={openModalHandler} customStyle={{ minHeight: "56px" }}>
+          Back this project
+        </Button>
         {/* props.function - trigger state change to enable modal */}
         <BookmarkBtn />
       </div>
