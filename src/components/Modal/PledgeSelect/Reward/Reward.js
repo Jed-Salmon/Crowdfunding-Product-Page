@@ -11,42 +11,41 @@ const Reward = (props) => {
 
   const rewardSubmitHandler = (e) => {
     e.preventDefault();
-    // + operand converts string to number
-    const enteredPrice = priceInputRef.current.value;
+    // the plus symbol converts from string to number
+    const enteredPrice = +priceInputRef.current.value;
 
     if (enteredPrice < reward.cost) {
-      console.log(enteredPrice);
       setError(true);
       setErrorMsg("You haven't met the minimum cost for this reward");
       return;
     }
     if (isNaN(enteredPrice)) {
-      console.log(enteredPrice);
-
       setError(true);
       setErrorMsg("You must enter your amount as a number");
       return;
     }
+    // call pledge handler function
+    props.submitPledge({ id: reward.id, amount: enteredPrice });
+    // pass in the amount backed and the reward id
     setError(false);
     setErrorMsg("");
-    console.log(enteredPrice);
   };
 
   return (
-    <label htmlFor={reward.title}>
+    <label htmlFor={reward.type}>
       <div className={classes.pledgeContent}>
         <div className={classes.row}>
           <span>
             <input
               type="radio"
-              id={reward.title}
+              id={reward.type}
               name="radio-select"
               className={classes.radioBtn}
             />
             <span className={classes.checkmark}></span>
 
             <div className={classes.titles}>
-              <h4 className={classes.title}>{reward.title}</h4>
+              <h4 className={classes.title}>{reward.type}</h4>
               <h4 className={classes.cost}>Pledge ${reward.cost} or more</h4>
             </div>
           </span>

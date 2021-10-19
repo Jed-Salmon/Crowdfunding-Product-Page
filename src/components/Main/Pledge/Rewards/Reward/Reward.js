@@ -13,7 +13,7 @@ const Reward = (props) => {
   return (
     <div className={classes.card}>
       <div className={classes.r1}>
-        <h3>{props.title}</h3>
+        <h3>{props.type}</h3>
         <p>{`Pledge $${props.cost} or more`}</p>
       </div>
       <div className={classes.r2}>

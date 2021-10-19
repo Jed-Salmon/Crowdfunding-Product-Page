@@ -8,7 +8,7 @@ export const defaultBackingState = {
   totalBackers: 5204,
   rewards: [
     {
-      title: "Bamboo Stand",
+      type: "Bamboo Stand",
       cost: 25,
       maxCost: 74,
       desc: "You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you’ll be added to a special Backer member list.",
@@ -16,7 +16,7 @@ export const defaultBackingState = {
       id: 1,
     },
     {
-      title: "Black Edition Stand",
+      type: "Black Edition Stand",
       cost: 75,
       maxCost: 199,
       desc: "You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer member list. Shipping is included.",
@@ -24,7 +24,7 @@ export const defaultBackingState = {
       id: 2,
     },
     {
-      title: "Mahogany Special Edition",
+      type: "Mahogany Special Edition",
       cost: 200,
       maxCost: 100000, // minus amount backed
       desc: "You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added to our Backer member list. Shipping is included.",
@@ -40,26 +40,20 @@ const BackingProvider = (props) => {
     defaultBackingState
   );
 
-  const onEnableBacker = () => {};
-  const onIncreaseBackedAmount = (amount) => {};
-  const onIncreaseTotalBackers = () => {};
-  // you will need the id to identify which reward to change
-  const onReduceRewardQuantity = (id) => {};
-  // rewards[id - 1].quantity - 1
+  const pledgeSupport = () => {
+    dispatchBackingAction({ type: "PLEDGE_SUPPORT" });
+  };
+  const pledgeReward = (pledge) => {
+    dispatchBackingAction({ type: "PLEDGE_REWARD", pledge });
+  };
 
   const backingContext = {
     backer: backingState.backer,
     amountBacked: backingState.amountBacked,
     totalBackers: backingState.totalBackers,
     rewards: backingState.rewards,
-
-    enableBacker: onEnableBacker,
-    // update amount backed by x
-    increaseAmountBacked: onIncreaseBackedAmount,
-    // update total backers by 1
-    increaseTotalBackers: onIncreaseTotalBackers,
-    // reduce reward amount by 1
-    reduceRewardQuantity: onReduceRewardQuantity,
+    pledgeSupport,
+    pledgeReward,
   };
 
   return (

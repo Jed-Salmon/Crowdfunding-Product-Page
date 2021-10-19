@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import BackingContext from "../../../store/backingContext/BackingContext";
 import Card from "../../UI/Card";
 import classes from "./Stats.module.css";
@@ -28,7 +28,7 @@ const Stats = () => {
       <div className={classes.progress}>
         <div
           className={classes.progressBar}
-          style={{ width: `${barWidth}%` }}
+          style={{ width: `${barWidth}%`, maxWidth: "100%" }}
         ></div>
       </div>
     </Card>

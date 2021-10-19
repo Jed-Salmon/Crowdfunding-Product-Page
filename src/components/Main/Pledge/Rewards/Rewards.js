@@ -4,7 +4,6 @@ import Reward from "./Reward/Reward";
 
 const Rewards = () => {
   const backingCtx = useContext(BackingContext);
-  console.log(backingCtx);
 
   return (
     <div className="rewards">
@@ -12,7 +11,7 @@ const Rewards = () => {
         return (
           <Reward
             key={reward.id}
-            title={reward.title}
+            type={reward.type}
             desc={reward.desc}
             amount={reward.amount}
             cost={reward.cost}

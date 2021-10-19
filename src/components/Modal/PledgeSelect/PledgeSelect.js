@@ -9,6 +9,15 @@ const PledgeSelect = () => {
   const modalCtx = useContext(ModalContext);
   const backingCtx = useContext(BackingContext);
 
+  // {id: 1, amount: 470}
+  const pledgeSubmitHandler = () => {
+    backingCtx.pledgeSupport();
+  };
+
+  const pledgeRewardSubmitHandler = (pledge) => {
+    backingCtx.pledgeReward(pledge);
+  };
+
   return (
     <div className={classes.pledgeSelect}>
       <span className={classes.closeBtn} onClick={modalCtx.onCloseModal}>
@@ -57,13 +66,20 @@ const PledgeSelect = () => {
               <p>Confirm your pledge</p>
             </div>
             <div className={classes.pledgeControls}>
-              <Button type="submit">Continue</Button>
+              <Button type="submit" onClick={pledgeSubmitHandler}>
+                Continue
+              </Button>
             </div>
           </div>
-          {/* if rewardSelected then display pledgeInput */}
         </label>
         {backingCtx.rewards.map((reward) => {
-          return <Reward reward={reward} key={reward.id} />;
+          return (
+            <Reward
+              reward={reward}
+              submitPledge={pledgeRewardSubmitHandler}
+              key={reward.id}
+            />
+          );
         })}
       </div>
     </div>
