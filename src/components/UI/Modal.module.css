@@ -37,6 +37,12 @@
   }
 }
 
+@media screen and (max-width: 640px) {
+  .modal {
+    padding: 1.5rem;
+  }
+}
+
 @keyframes slide-down {
   from {
     opacity: 0;

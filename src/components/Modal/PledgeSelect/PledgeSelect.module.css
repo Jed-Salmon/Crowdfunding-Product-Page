@@ -1,6 +1,16 @@
+/* modal container */
 .pledgeSelect {
+  display: flex;
+  flex-direction: column;
 }
 
+/* close (X) button */
+.pledgeSelect .closeBtn {
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+/* main headings */
 .pledgeSelect .headings {
   margin-top: 1rem;
 }
@@ -12,35 +22,99 @@
 .rewardOptions {
 }
 
+/* reward card */
 .rewardOptions label {
   display: flex;
+  flex-direction: column;
   outline: 1px solid gray;
-  padding: 1.5rem;
   border-radius: 8px;
   margin: 1.5rem 0;
 }
-.rewardOptions label .radioBtn {
-}
 
 .rewardOptions .pledgeContent {
+  margin: 1.5rem;
 }
 
+.pledgeContent .quantityMobile {
+  display: none;
+}
+
+.pledgeContent .desc {
+  margin-left: 3rem;
+}
+
+/* top row (title, cost, amount left) */
 .pledgeContent .row {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 1rem;
 }
 
+/*  title & cost */
 .pledgeContent .row span {
   display: flex;
   align-items: center;
 }
 
-span .titles {
-  display: flex;
+/* hide default radio input */
+.rewardOptions label .radioBtn {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
 }
 
-span h4 {
+/* custom radio button */
+.rewardOptions label .checkmark {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+}
+
+/* label hover styling */
+.rewardOptions label:hover,
+label:focus-within {
+  outline: 2px solid var(--primary);
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.rewardOptions label .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.row span input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.row span .checkmark:after {
+  top: 5.5px;
+  left: 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--primary);
+}
+
+.rewardOptions label:hover .checkmark {
+  border-color: var(--primary);
+}
+
+.row span .titles {
+  display: flex;
+  margin-left: calc(3rem - 25px);
+}
+
+.pledgeContent span h4 {
   margin-right: 0.5rem;
 }
 
@@ -52,11 +126,121 @@ span .titles .title {
   color: var(--secondary);
 }
 
-.pledgeContent .pledgeSelected {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* display pledge options after clicking on the reward */
+label:focus-within .pledgeSelected {
+  visibility: visible;
+  height: 100%;
+  padding: 1.5rem;
+  border-top: 1px solid gray;
+  animation: fadeIn 1s;
 }
 
+/* pledge input and button container styles */
+.rewardOptions .pledgeSelected {
+  display: flex;
+  justify-content: space-between;
+  height: 0;
+  padding: 0 1.5rem;
+  align-items: center;
+  visibility: hidden;
+  transition: all 0.25s ease;
+}
+
+label:focus-within .pledgeSelected > div {
+  display: block;
+}
+
+.rewardOptions .pledgeSelected > div {
+  display: none;
+}
+
+.pledgeSelected .pledgeControls {
+  text-align: right;
+}
+
+.pledgeControls input {
+  width: min-content;
+  height: min-content;
+  padding: 1rem 1.5rem;
+  max-width: 100px;
+  max-height: 60px;
+  border: 1px solid gray;
+  border-radius: 100px;
+  margin-right: 1rem;
+}
+
+/* REMOVE INPUT ARROWS */
+/* Chrome, Safari, Edge, Opera */
+.pledgeSelected input::-webkit-outer-spin-button,
+.pledgeSelected input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.pledgeSelected input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* mobile responsiveness */
 @media screen and (max-width: 640px) {
+  .pledgeSelect .headings {
+    margin-top: 0;
+  }
+
+  .pledgeSelect .closeBtn {
+    position: absolute;
+    top: 30px;
+  }
+
+  .row span .titles {
+    flex-direction: column;
+  }
+
+  .row .titles .cost {
+    margin-top: 0.5rem;
+  }
+
+  .row span .titles h4 {
+    margin: 0;
+  }
+
+  .pledgeContent .desc {
+    margin: 1.5rem 0;
+  }
+
+  .pledgeContent .row .quantity {
+    display: none;
+  }
+
+  .pledgeContent .quantityMobile {
+    display: flex;
+    align-items: center;
+  }
+
+  .quantityMobile h3 {
+    margin-right: 0.5rem;
+  }
+
+  .pledgeSelected .pledgeControls {
+    text-align: center;
+  }
+
+  .rewardOptions .pledgeSelected {
+    flex-direction: column;
+  }
+
+  .pledgeSelected p {
+    text-align: center;
+    margin-bottom: 1.25rem;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
 }

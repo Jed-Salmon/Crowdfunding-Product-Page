@@ -20,7 +20,7 @@
 }
 
 @media screen and (max-width: 640px) {
-  span {
+  .bookmark span {
     display: none;
   }
 }
