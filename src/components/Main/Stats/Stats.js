@@ -11,7 +11,7 @@ const Stats = () => {
     <Card>
       <div className={classes.backingStats}>
         <div className="totalBacked">
-          <h1>{backingCtx.amountBacked.toLocaleString("en-US")}</h1>
+          <h1>{`$${backingCtx.amountBacked.toLocaleString("en-US")}`}</h1>
           <p>of $100,000 backed</p>
         </div>
         <hr />
