@@ -1,5 +1,5 @@
 import BackingContext from "../../../../store/backingContext/BackingContext";
-import { useContext } from "react/cjs/react.development";
+import { useContext } from "react";
 import Reward from "./Reward/Reward";
 
 const Rewards = () => {
