@@ -3,7 +3,7 @@ import ModalContext from "../../../store/modalContext/ModalContext";
 import Card from "../../UI/Card";
 import Logo from "./assets/logo-mastercraft.svg";
 import Button from "../../UI/Button";
-import BookmarkBtn from "./bookmarkBtn/BookmarkBtn";
+// import BookmarkBtn from "./bookmarkButton/BookmarkBtn";
 import classes from "./Hero.module.css";
 
 const Hero = () => {
@@ -26,7 +26,7 @@ const Hero = () => {
         <Button onClick={openModalHandler} customStyle={{ minHeight: "56px" }}>
           Back this project
         </Button>
-        <BookmarkBtn />
+        {/* <BookmarkBtn /> */}
       </div>
     </Card>
   );
