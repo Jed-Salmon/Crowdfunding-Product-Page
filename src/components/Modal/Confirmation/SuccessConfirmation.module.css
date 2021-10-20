@@ -1,0 +1,11 @@
+.successModal {
+  text-align: center;
+}
+
+.successModal > * {
+  margin-bottom: 1.5rem;
+}
+
+.successModal > *:last-child {
+  margin: 0;
+}

@@ -9,7 +9,6 @@ const PledgeSelect = () => {
   const modalCtx = useContext(ModalContext);
   const backingCtx = useContext(BackingContext);
 
-  // {id: 1, amount: 470}
   const pledgeSubmitHandler = () => {
     backingCtx.pledgeSupport();
   };

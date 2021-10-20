@@ -168,6 +168,10 @@ label:focus-within .pledgeSelected > div {
   margin-right: 1rem;
 }
 
+.pledgeControls input:focus-visible {
+  outline: 2px solid var(--primary);
+}
+
 /* REMOVE INPUT ARROWS */
 /* Chrome, Safari, Edge, Opera */
 .pledgeSelected input::-webkit-outer-spin-button,

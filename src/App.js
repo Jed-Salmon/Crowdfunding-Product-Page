@@ -5,6 +5,7 @@ import BackingContext from "./store/backingContext/BackingContext";
 import ModalContext from "./store/modalContext/ModalContext";
 import Modal from "./components/UI/Modal";
 import PledgeSelect from "./components/Modal/PledgeSelect/PledgeSelect";
+import SuccessConfirmation from "./components/Modal/Confirmation/SuccessConfirmation";
 
 function App() {
   const backingCtx = useContext(BackingContext);
@@ -24,7 +25,9 @@ function App() {
   return (
     <div className="App">
       {isOpen && backingCtx.backer === true && (
-        <Modal onCloseModal={modalCtx.onCloseModal}>Success Component</Modal>
+        <Modal onCloseModal={modalCtx.onCloseModal}>
+          <SuccessConfirmation />
+        </Modal>
       )}
       {isOpen && backingCtx.backer === false && (
         <Modal onCloseModal={modalCtx.onCloseModal}>

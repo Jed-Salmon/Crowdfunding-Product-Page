@@ -1,3 +1,7 @@
+.disabled {
+  opacity: 0.5;
+}
+
 .card {
   background: white;
   padding: 1.25rem;

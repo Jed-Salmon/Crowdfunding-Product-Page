@@ -16,13 +16,9 @@
   list-style: none;
 }
 
-.navLinks li a {
-  text-decoration: none;
-  color: white;
-}
-
 .navLinks li {
   margin-right: 2rem;
+  cursor: pointer;
 }
 
 .navLinks li:last-of-type {

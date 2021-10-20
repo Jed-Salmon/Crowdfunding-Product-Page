@@ -7,15 +7,9 @@ const Navbar = () => {
         <h1>Crowdfund</h1>
       </div>
       <ul className={classes.navLinks}>
-        <li>
-          <a href="/">About</a>
-        </li>
-        <li>
-          <a href="/">Discover</a>
-        </li>
-        <li>
-          <a href="/">Get Started</a>
-        </li>
+        <li>About</li>
+        <li>Discover</li>
+        <li>Get Started</li>
       </ul>
     </nav>
   );

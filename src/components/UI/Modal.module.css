@@ -19,6 +19,8 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   z-index: 30;
   animation: slide-down 300ms ease-out forwards;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 @media (min-width: 768px) {
@@ -31,8 +33,7 @@
 /* enables scroll once smaller than height of the modal */
 @media screen and (max-height: 963px) {
   .modal {
-    top: 3.75%;
-    height: 92.5%;
+    max-height: 92.5%;
     overflow-y: scroll;
   }
 }
@@ -46,10 +47,10 @@
 @keyframes slide-down {
   from {
     opacity: 0;
-    transform: translateY(-3rem);
+    transform: translateY(calc(-50% - 3rem));
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(-50%);
   }
 }

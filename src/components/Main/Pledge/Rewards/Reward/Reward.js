@@ -11,7 +11,11 @@ const Reward = (props) => {
   };
 
   return (
-    <div className={classes.card}>
+    <div
+      className={
+        props.quantity ? classes.card : `${classes.card} ${classes.disabled}`
+      }
+    >
       <div className={classes.r1}>
         <h3>{props.type}</h3>
         <p>{`Pledge $${props.cost} or more`}</p>
