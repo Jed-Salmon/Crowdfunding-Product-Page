@@ -24,3 +24,19 @@
 .navLinks li:last-of-type {
   margin-right: 0;
 }
+
+.hamburger {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 640px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .navLinks {
+    display: none;
+  }
+}
