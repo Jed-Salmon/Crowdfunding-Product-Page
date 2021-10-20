@@ -3,7 +3,7 @@ import ModalContext from "../../../store/modalContext/ModalContext";
 import Card from "../../UI/Card";
 import Logo from "./assets/logo-mastercraft.svg";
 import Button from "../../UI/Button";
-import BookmarkBtn from "./BookmarkBtn/BookmarkBtn";
+import BookmarkBtn from "./bookmarkBtn/BookmarkBtn";
 import classes from "./Hero.module.css";
 
 const Hero = () => {
