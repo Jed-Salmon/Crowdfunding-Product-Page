@@ -11,4 +11,7 @@
   .about p {
     margin-bottom: 1rem;
   }
+  .about h2 {
+    margin: 1.25rem 0;
+  }
 }
