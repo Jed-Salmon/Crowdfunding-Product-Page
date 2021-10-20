@@ -1,4 +1,4 @@
-import { useContext } from "react/cjs/react.development";
+import { useContext } from "react";
 import ModalContext from "../../../store/modalContext/ModalContext";
 import Button from "../../UI/Button";
 import classes from "./SuccessConfirmation.module.css";
